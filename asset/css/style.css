@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+    color: #222;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.container{
+    background-color: #fafafa;
+    padding: 50px;
+    width: 100vw;
+    min-height: 100vh;
+    transform-origin: top left;
+    transition: 0.5s linear;
+}
+
+.container.display-nav{
+    transform: rotate(-20deg);
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    position: relative;
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transition: transform 0.5s linear;
+}
+
+.container.display-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.btn{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+    height: 100px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+#open{
+    left: 60%;
+}
+
+
+/* Style for content */
+.content-container{
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content-container img {
+    max-width: 100%;
+    margin: 1rem 0;
+}
+
+.content-container h1{
+    margin: 0;
+}
+
+.content-container span{
+    color: #555;
+    font-style: italic;
+}
+
+.content-container p{
+    color: #333;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+
+/* Style for navbar */
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 50;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li{
+    margin: 40px 0;
+    color: #fff;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+nav ul li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+li:nth-child(2){
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+li:nth-child(3){
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+li a{
+    color: #fafafa;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+li a:hover {
+    color: #FF7979;
+    font-weight: bold;
+}
+
+.container.display-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+
+
